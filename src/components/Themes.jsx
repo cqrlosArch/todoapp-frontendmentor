@@ -12,7 +12,8 @@ export const lightTheme = {
     active:'hsl(220, 98%, 61%)',
     hover:'hsl(235, 19%, 35%)',
     dragDrop:'hsl(235, 19%, 35%)',
-    footer:'hsla(235, 19%, 35%,0.5)'
+    footer:'hsla(235, 19%, 35%,0.5)',
+    checkbg:'linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%))'
 
 }
 export const darkTheme = {
