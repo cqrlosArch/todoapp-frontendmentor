@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 
-const ButtonStyled = styled.button`
+const ButtonStyled = styled.button.attrs((props) => ({
+  type: props.submit && 'submit',
+}))`
   outline: none;
   border: none;
   display: block;

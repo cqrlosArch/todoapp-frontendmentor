@@ -38,7 +38,7 @@ const Form = ({ getTaskForm }) => {
 
   return (
     <FormStyled onSubmit={(e) => onHandleSubmit(e)}>
-      <Button left={'54px'} />
+      <Button left={'54px'} submit />
       <input
         type="text"
         placeholder="Create a new todo..."
