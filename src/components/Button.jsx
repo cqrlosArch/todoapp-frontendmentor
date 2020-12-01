@@ -1,29 +1,53 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const ButtonStyled = styled.button`
   outline: none;
   border: none;
   display: block;
   position: absolute;
-  z-index: 9990;
+
+  z-index: 10;
   height: 20px;
   width: 20px;
   border-radius: 50%;
   border: 1px solid ${({ theme }) => theme.buttonInput};
   top: 13px;
   left: ${({ left }) => left};
-  background-color: transparent;
+  background: ${({ status, theme }) =>
+    status ? `${theme.checkbg}` : 'transparent'};
   cursor: pointer;
+  ${({ status }) =>
+    status &&
+    css`
+      &::after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        z-index: 15;
+        top: 4px;
+        left: 5px;
+        background: url('images/icon-check.svg') no-repeat center;
+        background-size: 100%;
+      }
+    `}
 `;
 
-const Button = ({ left, changeStatusTask, id }) => {
+const Button = ({ left, changeStatusTask, id, status }) => {
+  console.log(status);
   const handleClick = () => {
     if (changeStatusTask) {
       changeStatusTask(id);
     }
   };
 
-  return <ButtonStyled left={left} onClick={handleClick}></ButtonStyled>;
+  return (
+    <ButtonStyled
+      left={left}
+      onClick={handleClick}
+      status={status}
+    ></ButtonStyled>
+  );
 };
 
 export default Button;

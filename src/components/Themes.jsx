@@ -29,6 +29,8 @@ export const darkTheme = {
     active:'hsl(220, 98%, 61%)',
     hover:'hsl(236, 33%, 92%)',
     dragDrop:'hsl(233, 14%, 35%)',
-    footer:'hsla(235, 19%, 35%,0.5)'
+    footer:'hsla(235, 19%, 35%,0.5)',
+    checkbg:'linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%))'
     
 }
+

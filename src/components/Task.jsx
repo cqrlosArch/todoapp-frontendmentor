@@ -49,7 +49,7 @@ const Task = ({ task, deleteTask, changeStatusTask, provided }) => {
       {...provided.draggableProps}
       {...provided.dragHandleProps}
     >
-      <Button changeStatusTask={changeStatusTask} id={id} />
+      <Button changeStatusTask={changeStatusTask} id={id} status={status}/>
       <p className="task__text">{text}</p>
       <button className="button__close" onClick={() => deleteTask(id)}></button>
     </TaskStyled>
