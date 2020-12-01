@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const CounterStyled = styled.p`
-  width:100%;
+  width: 100%;
   font-size: 14px;
 `;
 

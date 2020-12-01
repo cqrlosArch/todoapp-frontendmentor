@@ -112,6 +112,15 @@ function App() {
     if (tasks) localStorage.setItem('todoApp', JSON.stringify(tasks));
   }, [tasks]);
 
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem('theme');
+    localTheme && setTheme(localTheme);
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem('theme', theme);
+  }, [theme]);
+
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyled />
@@ -126,7 +135,12 @@ function App() {
           clearCompleted={clearCompleted}
           handleOnDragEnd={handleOnDragEnd}
         />
-        <Menu filter={filter} changeFilterMenu={changeFilterMenu} tasks={tasks} clearCompleted={clearCompleted}/>
+        <Menu
+          filter={filter}
+          changeFilterMenu={changeFilterMenu}
+          tasks={tasks}
+          clearCompleted={clearCompleted}
+        />
         <Footer />
       </Wrapper>
     </ThemeProvider>

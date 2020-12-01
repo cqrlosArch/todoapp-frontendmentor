@@ -34,7 +34,6 @@ const ButtonStyled = styled.button`
 `;
 
 const Button = ({ left, changeStatusTask, id, status }) => {
-
   const handleClick = () => {
     if (changeStatusTask) {
       changeStatusTask(id);

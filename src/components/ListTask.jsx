@@ -37,7 +37,6 @@ const ListTaskStyled = styled.div`
     padding: 0 1rem;
     color: ${({ theme }) => theme.buttonInput};
     box-shadow: 2px 14px 22px -5px rgba(0, 0, 0, 0.3);
-    
   }
 `;
 

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import MenuItem from './MenuItem';
 
-
 const MenuStyled = styled.nav`
   height: 50px;
   display: flex;
@@ -16,7 +15,6 @@ const MenuStyled = styled.nav`
   color: ${({ theme }) => theme.buttonInput};
   box-shadow: 2px 14px 34px 6px rgba(0, 0, 0, 0.2);
 
-
   .menu__list {
     padding: 0 2.5rem;
     width: 100%;
@@ -24,14 +22,12 @@ const MenuStyled = styled.nav`
     align-items: center;
     justify-content: space-around;
   }
-
 `;
 
-const Menu = ({ filter, changeFilterMenu}) => {
+const Menu = ({ filter, changeFilterMenu }) => {
   return (
     <MenuStyled>
       <ul className="menu__list">
-        
         <MenuItem
           text={'All'}
           filter={filter}
@@ -50,9 +46,7 @@ const Menu = ({ filter, changeFilterMenu}) => {
           value={'completed'}
           changeFilterMenu={changeFilterMenu}
         />
-       
       </ul>
-
     </MenuStyled>
   );
 };

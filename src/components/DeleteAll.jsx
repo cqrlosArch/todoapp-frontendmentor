@@ -8,13 +8,11 @@ const DeleteAllStyled = styled.button`
   font-family: 'Josefin Sans', sans-serif;
   font-size: 14px;
   cursor: pointer;
-  width:170px;
+  width: 170px;
 `;
 
-const DeleteAll = ({ text,clearCompleted }) => {
-  return (
-    <DeleteAllStyled onClick={clearCompleted}>{text}</DeleteAllStyled>
-  );
+const DeleteAll = ({ text, clearCompleted }) => {
+  return <DeleteAllStyled onClick={clearCompleted}>{text}</DeleteAllStyled>;
 };
 
 export default DeleteAll;

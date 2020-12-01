@@ -11,7 +11,8 @@ const HeaderStyled = styled.header`
   width: 100%;
   padding: 2rem;
   @media screen and (min-width: 600px) {
-    background-image: url('images/${({ theme }) => theme.backgroundImgDesktop}');
+    background-image: url('images/${({ theme }) =>
+      theme.backgroundImgDesktop}');
   }
   .title {
     width: 100%;
@@ -22,13 +23,12 @@ const HeaderStyled = styled.header`
     color: ${({ theme }) => theme.title};
     @media screen and (min-width: 600px) {
       justify-content: space-evenly;
-     padding:0 2rem;
+      padding: 0 2rem;
     }
     &__text {
       letter-spacing: 0.5rem;
       margin: 0;
       font-weight: 500;
-     
     }
     &__icon {
       cursor: pointer;
@@ -38,7 +38,6 @@ const HeaderStyled = styled.header`
       background-repeat: no-repeat;
       background-size: 100%;
       background-position: center center;
-    
     }
   }
 `;
