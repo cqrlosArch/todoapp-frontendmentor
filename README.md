@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://todo-app.cqrlosarch.vercel.app/">
+    <a href="https://todoapp-frontendmentor.cqrlosarch.vercel.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/solutions/lwzp4H8HUxka8yjnbnYm">
+    <a href="https://www.frontendmentor.io/solutions/mobile-first-site-using-react-and-styled-components-pGOlzgTwx">
       Solution
     </a>
     <span> | </span>
