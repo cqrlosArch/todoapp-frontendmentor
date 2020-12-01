@@ -35,7 +35,7 @@ const GlobalStyled = createGlobalStyle`
 const initTasks = [
   {
     id: '1',
-    text: 'Subscribe to the course of ReactJS',
+    text: 'Follow me on GitHub',
     status: false,
   },
   {
@@ -78,7 +78,7 @@ function App() {
         task.id === id
           ? {
               ...task,
-              status: true,
+              status: !task.status,
             }
           : task
       )

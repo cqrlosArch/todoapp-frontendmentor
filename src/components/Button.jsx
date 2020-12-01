@@ -34,7 +34,7 @@ const ButtonStyled = styled.button`
 `;
 
 const Button = ({ left, changeStatusTask, id, status }) => {
-  console.log(status);
+
   const handleClick = () => {
     if (changeStatusTask) {
       changeStatusTask(id);
@@ -43,6 +43,7 @@ const Button = ({ left, changeStatusTask, id, status }) => {
 
   return (
     <ButtonStyled
+      type="button"
       left={left}
       onClick={handleClick}
       status={status}

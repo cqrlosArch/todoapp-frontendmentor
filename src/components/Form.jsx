@@ -46,6 +46,8 @@ const Form = ({ getTaskForm }) => {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         name="task"
+        required
+        title='Create a new todo'
       />
     </FormStyled>
   );

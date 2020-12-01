@@ -51,7 +51,7 @@ const Task = ({ task, deleteTask, changeStatusTask, provided }) => {
     >
       <Button changeStatusTask={changeStatusTask} id={id} status={status}/>
       <p className="task__text">{text}</p>
-      <button className="button__close" onClick={() => deleteTask(id)}></button>
+      <button className="button__close" type="button" onClick={() => deleteTask(id)}></button>
     </TaskStyled>
   );
 };
