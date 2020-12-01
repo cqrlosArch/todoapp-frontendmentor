@@ -1,0 +1,17 @@
+Breve
+Su desafío es crear esta aplicación de tareas pendientes y hacer que se parezca lo más posible al diseño.
+
+Puedes usar cualquier herramienta que te guste para ayudarte a completar el desafío. Entonces, si tienes algo que te gustaría practicar, no dudes en intentarlo.
+
+Sus usuarios deberían poder:
+
+Ver el diseño óptimo para la aplicación según el tamaño de pantalla de su dispositivo
+Ver estados de desplazamiento para todos los elementos interactivos en la página
+Agregar nuevos todos a la lista
+Marcar todos como completos
+Eliminar todos de la lista
+Filtrar por todos / activos / todos completos
+Borrar todos los todos completados
+Alternar el modo claro y oscuro
+Bonificación: arrastre y suelte para reordenar los elementos de la lista
+Descargue el proyecto y revise el archivo README.md. Esto proporcionará más detalles sobre el proyecto y le ayudará a configurarlo.
