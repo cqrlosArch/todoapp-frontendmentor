@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Button from './Button';
-import {} from 'react-beautiful-dnd';
+import * as React from 'react'
 
 const TaskStyled = styled.li`
   list-style: none;
@@ -39,7 +39,8 @@ const TaskStyled = styled.li`
   }
 `;
 
-const Task = ({ task, deleteTask, changeStatusTask, provided }) => {
+const Task = React.memo(({ task, deleteTask, changeStatusTask, provided }) => {
+  console.log('task')
   const { id, text, status } = task;
   return (
     <TaskStyled
@@ -58,6 +59,6 @@ const Task = ({ task, deleteTask, changeStatusTask, provided }) => {
       ></button>
     </TaskStyled>
   );
-};
+});
 
 export default Task;

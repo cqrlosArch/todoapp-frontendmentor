@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import * as React from 'react';
 
 const ButtonStyled = styled.button.attrs((props) => ({
   type: props.submit && 'submit',
@@ -35,7 +36,9 @@ const ButtonStyled = styled.button.attrs((props) => ({
     `}
 `;
 
-const Button = ({ left, changeStatusTask, id, status }) => {
+
+const Button = React.memo(({ left, changeStatusTask, id, status }) => {
+ 
   const handleClick = () => {
     if (changeStatusTask) {
       changeStatusTask(id);
@@ -50,6 +53,6 @@ const Button = ({ left, changeStatusTask, id, status }) => {
       status={status}
     ></ButtonStyled>
   );
-};
+});
 
 export default Button;

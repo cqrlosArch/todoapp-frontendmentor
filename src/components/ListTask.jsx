@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Counter from './Counter';
 import DeleteAll from './DeleteAll';
 import Task from './Task';
+import * as React from 'react';
 
 const ListTaskStyled = styled.div`
   width: 100%;
@@ -40,58 +41,60 @@ const ListTaskStyled = styled.div`
   }
 `;
 
-const ListTask = ({
-  tasks,
-  deleteTask,
-  changeStatusTask,
-  filter,
-  clearCompleted,
-  handleOnDragEnd,
-}) => {
-  return (
-    <ListTaskStyled>
-      <DragDropContext onDragEnd={(e) => handleOnDragEnd(e)}>
-        <Droppable droppableId="tasks">
-          {(provided) => (
-            <ul
-              className="list__tasks tasks"
-              {...provided.droppableProps}
-              ref={provided.innerRef}
-            >
-              {tasks?.map((task, index) => {
-                return (
-                  (filter === 'all' ||
-                    (filter === 'completed' && task.status) ||
-                    (filter === 'active' && !task.status)) && (
-                    <Draggable
-                      key={task.id}
-                      draggableId={task.id}
-                      index={index}
-                    >
-                      {(provided) => (
-                        <Task
-                          key={task.id}
-                          task={task}
-                          deleteTask={deleteTask}
-                          changeStatusTask={changeStatusTask}
-                          provided={provided}
-                        ></Task>
-                      )}
-                    </Draggable>
-                  )
-                );
-              })}
-              {provided.placeholder}
-            </ul>
-          )}
-        </Droppable>
-      </DragDropContext>
-      <div className="countainer__counter">
-        <Counter tasks={tasks} />
-        <DeleteAll clearCompleted={clearCompleted} text={'Clear Completed'} />
-      </div>
-    </ListTaskStyled>
-  );
-};
+const ListTask = React.memo(
+  ({
+    tasks,
+    deleteTask,
+    changeStatusTask,
+    filter,
+    clearCompleted,
+    handleOnDragEnd,
+  }) => {
+    return (
+      <ListTaskStyled>
+        <DragDropContext onDragEnd={(e) => handleOnDragEnd(e)}>
+          <Droppable droppableId="tasks">
+            {(provided) => (
+              <ul
+                className="list__tasks tasks"
+                {...provided.droppableProps}
+                ref={provided.innerRef}
+              >
+                {tasks?.map((task, index) => {
+                  return (
+                    (filter === 'all' ||
+                      (filter === 'completed' && task.status) ||
+                      (filter === 'active' && !task.status)) && (
+                      <Draggable
+                        key={task.id}
+                        draggableId={task.id}
+                        index={index}
+                      >
+                        {(provided) => (
+                          <Task
+                            key={task.id}
+                            task={task}
+                            deleteTask={deleteTask}
+                            changeStatusTask={changeStatusTask}
+                            provided={provided}
+                          ></Task>
+                        )}
+                      </Draggable>
+                    )
+                  );
+                })}
+                {provided.placeholder}
+              </ul>
+            )}
+          </Droppable>
+        </DragDropContext>
+        <div className="countainer__counter">
+          <Counter tasks={tasks} />
+          <DeleteAll clearCompleted={clearCompleted} text={'Clear Completed'} />
+        </div>
+      </ListTaskStyled>
+    );
+  }
+);
 
 export default ListTask;

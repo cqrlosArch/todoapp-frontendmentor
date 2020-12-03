@@ -12,6 +12,7 @@ const WrapperStyled = styled.div`
 `;
 
 const Wrapper = ({ children }) => {
+
   return <WrapperStyled>{children}</WrapperStyled>;
 };
 
